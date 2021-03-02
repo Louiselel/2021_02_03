@@ -1,0 +1,23 @@
+{
+  "name": "2021_02_03",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Louiselel/2021_02_03.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Louiselel/2021_02_03/issues"
+  },
+  "homepage": "https://github.com/Louiselel/2021_02_03#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
