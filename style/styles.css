@@ -1,11 +1,11 @@
 body{
-    color:green;
+    color:black;
     background-image: url(../image/wood.jpg);
     background-size: 100% 100%; 
     height: 98vh;
 }
 #formulaire-de-saisie{
-    width: 45%;
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
     border-style: solid;
@@ -51,12 +51,12 @@ body{
     text-align: center;
     height: calc(120vh - 500px);
     overflow-y: scroll;
-
-
+    vertical-align: top;
 }
 .post-it{
     border:1px solid black;
     width: 20%;
+    height: 240px;
     margin-left: 4.5%;
     margin-bottom: 10px;
     background-color: #FFFFA5;
@@ -65,7 +65,42 @@ body{
     box-shadow:15px 20px 20px black;
 
 }
+.center{
+    text-align: center;
+}
 .post-it:hover{
     box-shadow: 15px 15px 20px grey;
     background-color: gold;
+}
+.container-image-close{
+    float: right;
+}
+.container-image-close > img{
+    width: 32px;
+    height: 32px;
+}
+.post-it-description{
+    margin-top: 20px;
+    overflow-y: auto; 
+    height: 75px;
+}
+@media print{
+    body{
+        background-image: none;
+    }
+    #jsLoaded, #formulaire-de-saisie, hr{
+        display: none;
+    }
+    .post-it{
+        height: auto;
+        width:6cm;
+    }
+    #post-it-liste{
+        height :auto;
+        overflow-y: unset;
+    }
+    .post-it-description{
+        margin-top: 1cm;
+        height:auto;
+    }
 }
