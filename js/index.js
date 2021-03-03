@@ -1,13 +1,64 @@
-// chargement dans une variable de la balise <div id="jsLoaded">. . .</div>
-var jsloaded=document.querySelector("#jsLoaded");
+function jsIsLoaded(params) {
+    var jsloaded = document.querySelector("#jsLoaded")
 
-// modif du style css de la balise
-jsloaded.style.backgroundColor="green";
+    jsloaded.style.backgroundColor = "green";
 
-//modif du contenu textuel de la balise
-jsloaded.innerText="Le js est chargé";
-console.log("la page est chargée")
+    jsloaded.innerText = "le js esr chargé";
 
-function jsLoaded(params) {
-    
 }
+
+
+jsIsLoaded();
+
+function getFormulaire() {
+    var formulaire = document.forms['mon-form'];
+    // console.log('titre :', formulaire['form-titre'].value);
+    // console.log('auteur :', formulaire['form-auteur'].value);
+    // console.log('mail :', formulaire['form-email'].value);
+    // console.log('hour :', formulaire['form-hour'].value);
+    // console.log('date :', formulaire['form-date'].value);
+    // console.log('adresse :', formulaire['form-adresse'].value);
+    // console.log('description :', formulaire['form-description'].value);
+
+    var unPostIt = {
+        titre: formulaire['form-titre'].value,
+        auteurId: formulaire['form-auteur'].value,
+        date: formulaire['form-date'].value,
+        heure: formulaire['form-hour'].value,
+        adresse: formulaire['form-adresse'].value,
+        description: formulaire['form-description'].value,
+        mail: formulaire['form-email'].value
+    }
+
+    console.log(unPostIt);
+    return unPostIt;
+}
+function makePostIt(postitValues) {
+    var postitNode = document.querySelector('.post-it').cloneNode(true);
+    postitNode.querySelector('.post-it-titre').innerText = postitValues.titre;
+    postitNode.querySelector('.post-it-adresse').innerText = postitValues.adresse;
+    postitNode.querySelector('.post-it-mail').innerText = postitValues.mail;
+    postitNode.querySelector('.post-it-date').innerText = 'Le ' + postitValues.date + 'a' + postitValues.heure;
+    postitNode.querySelector('.post-it-description').innerText = postitValues.description;
+
+
+
+    document.querySelector('#post-it-liste').append(postitNode);
+
+}
+
+
+function onformsubmit(evt) {
+    evt.preventDefault();
+    getFormulaire();
+    console.log(evt);
+    var postitValues = getFormulaire();
+    makePostIt(postitValues);
+    evt.target.reset();
+
+
+}
+document.forms['mon-form'].addEventListener('submit', onformsubmit);
+
+
+
