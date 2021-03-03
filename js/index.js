@@ -6,3 +6,4 @@ jsloaded.style.backgroundColor="green";
 
 //modif du contenu textuel de la balise
 jsloaded.innerText="Le js est chargé";
+console.log("la page est chargée")
