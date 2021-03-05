@@ -18,8 +18,10 @@
                 <table>
                     <tr>
                         <td><label for="form-titre">Titre de la note</label></td>
-                        <td><input type="text" name="form-titre" id="form-titre" /></td>
-                    </tr>
+                        <td><input pattern="[a-zA-Zéèçàêë -_]{1,}" 
+                            placeholder="saisissez le titre"
+                            type="text" name="form-titre" id="form-titre" /></td>
+                    </tr>c
                     <tr>
                         <td><label for="form-auteur">auteur</label></td>
                         <td>
@@ -55,24 +57,13 @@
                     <tr>
                         <td><button class="btn btn-error" type="reset">clear</button></td>
                         <td><button class="btn btn-success" type="submit">save <span
-                                    style="color:rgb(253, 252, 252)">postit</span></button></td>
+                                    style="color:rgb(253, 250, 250)">postit</span></button></td>
                     </tr>
                 </table>
             </form>
         </div>
         <hr />
-        <div id="post-it-liste">
-            <div class="post-it">premier post-it
-                <div class="container-image-close"><img src="image/iconfinder_cross.png" alt="close"></div>
-                <h2 class="post-it-titre center"> titre de la note</h2>
-                <div class="center post-it-date"> le 02/02/21 à 00:00</div>
-                <div class="center post-it-mail"> abcdef@gmail.com</div>
-                <div class="center post-it-adresse"> 10 rue du chemin blanc 67000 PoiX</div>
-                <div class="post-it-description"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda
-                    dolor deleniti expedita praesentium labore dolore quaerat, placeat fugit aliquid provident
-                    voluptatum, cumque voluptatibus ipsum hic repellendus dolores quo enim consequatur.</div>   
-            </div>
-        </div>
+        <div id="post-it-liste"></div>
         <script src="js/index.js"></script>
 </body>
 

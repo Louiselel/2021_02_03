@@ -1,0 +1,14 @@
+{
+  "postits": [
+    {
+      "id": 0,
+      "titre": "titre du postit",
+      "date": "2021-05-02",
+      "heure": "00:00:00",
+      "adresse": "formulaire",
+      "description": "lorem",
+      "mail": "me@m.fr"
+    },
+    {}
+  ]
+}
